@@ -16,7 +16,12 @@ export const DEMO_LANDING_DATA = {
     landing_facilities: [
         'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2680&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2670&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=2670&auto=format&fit=crop'
+        'https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=2670&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2658&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?q=80&w=2670&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2674&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2670&auto=format&fit=crop'
     ],
     facilities_kamar: ["Kamar Mandi Dalam", "AC & Water Heater", "Full Furnished", "Springbed Premium", "Smart TV 32 inch"],
     facilities_keamanan: ["CCTV 24 Jam", "Access Card", "Penjaga 24 Jam", "Pembersihan Kamar Rutin", "Laundry Service"],

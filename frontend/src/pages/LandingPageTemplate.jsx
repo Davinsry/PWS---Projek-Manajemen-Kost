@@ -72,14 +72,15 @@ const HeroSection = ({ content }) => {
                     </motion.div>
 
                     <h1 style={{
-                        fontSize: 'clamp(3.5rem, 8vw, 6rem)',
+                        fontSize: 'clamp(2.5rem, 7vw, 5rem)',
                         fontWeight: '800',
                         lineHeight: 1.1,
                         marginBottom: '1.5rem',
                         background: 'linear-gradient(to right, #ffffff, #818cf8)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
-                        textShadow: '0 20px 40px rgba(0,0,0,0.3)'
+                        textShadow: '0 20px 40px rgba(0,0,0,0.3)',
+                        padding: '0 0.5rem'
                     }}>
                         {content.title}
                     </h1>
@@ -205,22 +206,12 @@ const FacilitiesCarousel = ({ facilities }) => {
     if (!facilities || facilities.length === 0) return null;
 
     return (
-        <section style={{ padding: '4rem 0', background: '#0f172a', overflow: 'hidden', position: 'relative' }}>
+        <section style={{ padding: '2rem 0', background: '#0f172a', overflow: 'hidden', position: 'relative' }}>
             {/* Background glow effect */}
-            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '500px', height: '500px', background: 'rgba(79, 70, 229, 0.15)', filter: 'blur(100px)', borderRadius: '50%' }} />
+            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '400px', height: '400px', background: 'rgba(79, 70, 229, 0.15)', filter: 'blur(100px)', borderRadius: '50%' }} />
 
             <div style={{ maxWidth: '1200px', margin: '0 auto', width: '90%', position: 'relative', zIndex: 2 }}>
-                <h2 style={{
-                    fontSize: '2.5rem',
-                    fontWeight: 'bold',
-                    color: 'white',
-                    textAlign: 'center',
-                    marginBottom: '3rem'
-                }}>
-                    Galeri Suasana
-                </h2>
-
-                <div style={{ position: 'relative', height: '280px' }}>
+                <div style={{ position: 'relative', height: '260px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     {facilities.map((url, index) => {
                         let offset = index - currentIndex;
                         if (offset < -1) offset += facilities.length;
@@ -244,9 +235,9 @@ const FacilitiesCarousel = ({ facilities }) => {
                                     left: '50%',
                                     top: '50%',
                                     transform: 'translate(-50%, -50%)',
-                                    width: '400px',
+                                    width: '380px',
                                     maxWidth: '80%',
-                                    height: '240px',
+                                    height: '220px',
                                     borderRadius: '20px',
                                     overflow: 'hidden',
                                     boxShadow: offset === 0 ? '0 20px 40px -10px rgba(0, 0, 0, 0.5)' : 'none',
@@ -264,7 +255,7 @@ const FacilitiesCarousel = ({ facilities }) => {
                 </div>
 
                 {/* Pagination Dots */}
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', marginTop: '1.5rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem' }}>
                     {facilities.map((_, index) => (
                         <button
                             key={index}
@@ -336,23 +327,23 @@ const LocationSection = () => (
 );
 
 const Footer = () => (
-    <footer id="contact" style={{ background: '#0f172a', color: 'white', padding: '3rem 0', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+    <footer id="contact" style={{ background: '#0f172a', color: 'white', padding: '2rem 0 1.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '90%', textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem', background: 'linear-gradient(to right, #818cf8, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Siap Huni Sekarang?</h2>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.25rem', background: 'linear-gradient(to right, #818cf8, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Siap Huni Sekarang?</h2>
 
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
-                <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#e2e8f0', textDecoration: 'none', padding: '0.75rem 1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '50px', transition: 'all 0.3s' }} className="hover:bg-white/10">
-                    <Phone size={20} color="#818cf8" />
-                    <span style={{ fontSize: '1.1rem', fontWeight: '500' }}>0812-3456-7890</span>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+                <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', textDecoration: 'none', padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '50px', transition: 'all 0.3s', fontSize: '0.9rem' }} className="hover:bg-white/10">
+                    <Phone size={16} color="#818cf8" />
+                    <span style={{ fontWeight: '500' }}>0812-3456-7890</span>
                 </a>
-                <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#e2e8f0', textDecoration: 'none', padding: '0.75rem 1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '50px', transition: 'all 0.3s' }} className="hover:bg-white/10">
-                    <Instagram size={20} color="#e879f9" />
-                    <span style={{ fontSize: '1.1rem', fontWeight: '500' }}>@kosputra_executive</span>
+                <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', textDecoration: 'none', padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '50px', transition: 'all 0.3s', fontSize: '0.9rem' }} className="hover:bg-white/10">
+                    <Instagram size={16} color="#e879f9" />
+                    <span style={{ fontWeight: '500' }}>@kosputra_executive</span>
                 </a>
             </div>
 
-            <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem', color: '#64748b', fontSize: '0.9rem' }}>
-                <p>&copy; 2025 Kos Putra Executive. Created with ❤️ in Jogja.</p>
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem', color: '#64748b', fontSize: '0.8rem' }}>
+                <p style={{ margin: 0 }}>&copy; 2025 Kos Putra Executive. Created with ❤️ in Jogja.</p>
             </div>
         </div>
     </footer>
